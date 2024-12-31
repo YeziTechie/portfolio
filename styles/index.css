@@ -1,0 +1,197 @@
+:root {
+  --bg: black;
+  --fg: white;
+  --t1: rgb(0, 255, 115);
+  --t2: rgb(96, 65, 153);
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: monospace;
+}
+.main-circle {
+  z-index: 10;
+  border: solid 1px white;
+  border-radius: 50%;
+  background-color: var(--bg);
+  width: 80px;
+  opacity: 1;
+  height: 80px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+}
+
+.circle-container {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+  opacity:0;
+  transition: ease-out 1s;
+}
+
+ .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10 {
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border: white solid 1px;
+  border-radius: 50%;
+  position: absolute;
+ }
+
+.c1 {
+  top: 15%;
+}
+.c2 {
+  left: 75%;
+  top: 25%;
+}
+.c3 {
+  left: 85%;
+}
+.c4 {
+  top: 75%;
+  left: 75%;
+}
+.c5 {
+  top: 85%;
+}
+.c6 {
+  left: 25%;
+  top: 75%;
+}
+.c7 {
+  left: 15%;
+}
+.c9 {
+  left: 25%;
+  top: 25%;
+}
+
+@keyframes main-circle-clicked {
+  20% {
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 100px var(--t1), 0px 0px 200px var(--t2);
+    width: 200px;
+    border-color: transparent;
+    height: 200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+  }
+
+  30% {
+    box-shadow:
+    0px 0px 40px var(--t1),
+    0px 0px 80px var(--t2),
+    0px 0px 120px var(--t1),
+    0px 0px 160px var(--t2),
+    0px 0px 200px var(--t1),
+    0px 0px 250px var(--t2),
+    0px 0px 300px var(--t2),
+    0px 0px 350px var(--t2);
+    background-color: white;
+    border: none;
+  }
+
+  32% {
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    border: none;
+  }
+
+  40% {
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    box-shadow: none;
+    border: none;
+  }
+
+  55% {
+    transform: translate(-50%, -50%);
+    border-radius: 0%;
+    border: none;
+    background-color: white;
+    width: 1px;
+    height: 300px;
+  }
+
+  70% {
+    transform-origin: center;
+    border: none;
+    border-radius: 0;
+    transform: translate(-50%, -50%) rotate(180deg);
+    width: 1px;
+    height: 300px;
+    background-color: white;
+  }
+
+  80% {
+    transform-origin: center;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    transform: translate(-50%, -50%) rotate(180deg);
+    width: 300px;
+    height: 300px;
+    background-color: white;
+  }
+
+  90% {
+    transform-origin: center;
+    border: none;
+    box-shadow: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    width: 300px;
+    height: 300px;
+    background-color: white;
+  }
+
+  95% {
+    transform-origin: center;
+    border: white solid 1px;
+    box-shadow:
+    0px 0px 40px var(--t1),
+    0px 0px 80px var(--t2),
+    0px 0px 120px var(--t1),
+    0px 0px 160px var(--t2),
+    0px 0px 200px var(--t1),
+    0px 0px 250px var(--t2),
+    0px 0px 300px var(--t2),
+    0px 0px 350px var(--t2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    width: 300px;
+    height: 300px;
+    background-color: white;
+  }
+
+  100% {
+    transform-origin: center;
+    border:none;
+    box-shadow:none;
+    border-radius: 50%;
+    background-color: transparent;
+    transform: translate(-50%, -50%) rotate(180deg);
+    width: 300px;
+    z-index: -1;
+    height: 300px;
+    }
+}
