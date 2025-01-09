@@ -1,11 +1,18 @@
 :root {
   --bg: black;
-  --fg: white;
-  --t1: rgb(0, 255, 115);
-  --t2: rgb(96, 65, 153);
+  --fg: rgb(216, 216, 216);
+  --t1: rgb(38, 77, 151);
+  --t2: rgb(72, 0, 100);
 }
 
-body {
+/* :root {
+  --fg: black;
+  --bg: rgb(182, 182, 182);
+  --t1: rgb(0, 223, 74);
+  --t2: rgb(0, 100, 139);
+} */
+
+body, html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -13,9 +20,17 @@ body {
   color: var(--fg);
   font-family: monospace;
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .main-circle {
   z-index: 10;
-  border: solid 1px white;
+  border: solid 1px var(--fg);
   border-radius: 50%;
   background-color: var(--bg);
   width: 80px;
@@ -29,169 +44,89 @@ body {
 }
 
 .circle-container {
-  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items:center ;
+  align-items: center;
+  flex-direction: row;
+  transform: rotate(45deg);  
   z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
+  justify-content: center;
+  row-gap: 0;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 250px;
   background-color: transparent;
   opacity:0;
   transition: ease-out 1s;
 }
 
- .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10 {
+ .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9 {
   width: 50px;
   height: 50px;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  border: white solid 1px;
+  box-sizing: border-box;
+  border: var(--fg) solid 1px;
   border-radius: 50%;
-  position: absolute;
+  transform: rotate(45deg);
  }
 
-.c1 {
-  top: 15%;
-}
-.c2 {
-  left: 75%;
-  top: 25%;
-}
-.c3 {
-  left: 85%;
-}
-.c4 {
-  top: 75%;
-  left: 75%;
-}
-.c5 {
-  top: 85%;
-}
-.c6 {
-  left: 25%;
-  top: 75%;
-}
-.c7 {
-  left: 15%;
-}
-.c9 {
-  left: 25%;
-  top: 25%;
+ .cd1, .cd2, .cd3, .cd4, .cd5, .cd6, .cd7, .cd8, .cd9 {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  width: 70px;
+  height: 70px;
+  font-size: 160%;
+
+  border: 1px solid var(--t1);
+  background-color: var(--bg);
+  box-shadow: 0px 0px 50px var(--t2);
+
+  transition: ease-out 0.5s;
 }
 
-@keyframes main-circle-clicked {
-  20% {
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 100px var(--t1), 0px 0px 200px var(--t2);
-    width: 200px;
-    border-color: transparent;
-    height: 200px;
-    background-color: var(--bg);
-    border-radius: 50%;
-  }
+.cd1:hover, .cd2:hover, .cd4:hover {
+  border: 1px solid var(--t2);
+  background-color: var(--bg);
+  box-shadow: 0px 0px 100px var(--t1);
+}
 
-  30% {
-    box-shadow:
-    0px 0px 40px var(--t1),
-    0px 0px 80px var(--t2),
-    0px 0px 120px var(--t1),
-    0px 0px 160px var(--t2),
-    0px 0px 200px var(--t1),
-    0px 0px 250px var(--t2),
-    0px 0px 300px var(--t2),
-    0px 0px 350px var(--t2);
-    background-color: white;
-    border: none;
-  }
+.cd1 {
+  transform: translate(-50%, -0%);
+  top: 10px;
+  left: 50%;
+}
 
-  32% {
-    transform: translate(-50%, -50%);
-    width: 1px;
-    height: 1px;
-    background-color: white;
-    border: none;
-  }
+.cd2 {
+  transform: translate(-0%, -50%);
+  top: 30%;
+  right: 10px;
+}
 
-  40% {
-    transform: translate(-50%, -50%);
-    width: 1px;
-    height: 1px;
-    background-color: white;
-    box-shadow: none;
-    border: none;
-  }
+.cd3 {
+  transform: translate(-0%, 50%);
+  bottom: 30%;
+  right: 10px;
+}
 
-  55% {
-    transform: translate(-50%, -50%);
-    border-radius: 0%;
-    border: none;
-    background-color: white;
-    width: 1px;
-    height: 300px;
-  }
+.cd4 {
+  transform: translate(-0%, -50%);
+  top: 30%;
+  left: 10px;
+}
 
-  70% {
-    transform-origin: center;
-    border: none;
-    border-radius: 0;
-    transform: translate(-50%, -50%) rotate(180deg);
-    width: 1px;
-    height: 300px;
-    background-color: white;
-  }
+.cd5 {
+  transform: translate(-0%, 50%);
+  bottom: 30%;
+  left: 10px;
+}
 
-  80% {
-    transform-origin: center;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    transform: translate(-50%, -50%) rotate(180deg);
-    width: 300px;
-    height: 300px;
-    background-color: white;
-  }
-
-  90% {
-    transform-origin: center;
-    border: none;
-    box-shadow: none;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) rotate(180deg);
-    width: 300px;
-    height: 300px;
-    background-color: white;
-  }
-
-  95% {
-    transform-origin: center;
-    border: white solid 1px;
-    box-shadow:
-    0px 0px 40px var(--t1),
-    0px 0px 80px var(--t2),
-    0px 0px 120px var(--t1),
-    0px 0px 160px var(--t2),
-    0px 0px 200px var(--t1),
-    0px 0px 250px var(--t2),
-    0px 0px 300px var(--t2),
-    0px 0px 350px var(--t2);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) rotate(180deg);
-    width: 300px;
-    height: 300px;
-    background-color: white;
-  }
-
-  100% {
-    transform-origin: center;
-    border:none;
-    box-shadow:none;
-    border-radius: 50%;
-    background-color: transparent;
-    transform: translate(-50%, -50%) rotate(180deg);
-    width: 300px;
-    z-index: -1;
-    height: 300px;
-    }
+.cd6 {
+  transform: translate(-50%, -0%);
+  bottom: 10px;
+  left: 50%;
 }
