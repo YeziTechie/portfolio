@@ -226,3 +226,97 @@
     border: 1px solid var(--t1);
   }
 }
+
+@keyframes cd-appeared {
+
+  0% {
+    transform: rotate(20deg);
+    background-color: var(--bg);
+    border: solid 1px var(--t2);
+    width: 10px;
+    height: 10px;
+    box-shadow: 0px 0px 50px var(--t1), 0px 0px 100px var(--t2);
+  }
+  10% {
+    transform: rotate(-20deg);
+    background-color: var(--bg);
+    border: solid 1px var(--t1);
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 0px 50px var(--t2), 0px 0px 100px var(--t1);
+  }
+  20% {
+    transform: rotate(20deg);
+    background-color: var(--bg);
+    border: solid 1px var(--t2);
+    width: 30px;
+    height: 30px;
+    box-shadow: 0px 0px 50px var(--t1), 0px 0px 100px var(--t2);
+  }
+  30% {
+    transform: rotate(-20deg);
+    background-color: var(--bg);
+    border: solid 1px var(--t1);
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 0px 50px var(--t2), 0px 0px 100px var(--t1);
+  }
+  40% {
+    transform: rotate(20deg);
+    background-color: var(--bg);
+    border: solid 1px var(--t2);
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 0px 50px var(--t1), 0px 0px 100px var(--t2);
+  }
+  50% {
+    transform: rotate(-20deg);
+    background-color: var(--bg);
+    border: solid 1px var(--t1);
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 0px 50px var(--t2), 0px 0px 100px var(--t1);
+  }
+  60% {
+    transform: rotate(20deg);
+    background-color: var(--bg);
+    border: solid 1px var(--t2);
+    width: 70px;
+    height: 70px;
+    box-shadow: 0px 0px 50px var(--t1), 0px 0px 100px var(--t2);
+  }
+  70% {
+    transform: rotate(-20deg);
+    background-color: var(--bg);
+    border: solid 1px var(--t2);
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 0px 50px var(--t2), 0px 0px 100px var(--t1);
+  }
+  80% {
+    transform: rotate(20deg);
+    border-radius: 10%;
+    background-color: var(--bg);
+    border: solid 1px var(--t1);
+    width: 90px;
+    height: 90px;
+    box-shadow: 0px 0px 50px var(--t1), 0px 0px 100px var(--t2);
+  }
+  90% {
+    transform: rotate(-20deg);
+    border-radius: 30%;
+    background-color: var(--bg);
+    border: solid 1px var(--t2);
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 50px var(--t2), 0px 0px 100px var(--t1);
+  }
+  100% {
+    border-radius: 50%;
+    background-color: var(--bg);
+    border: solid 1px var(--t2);
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 100px var(--t1), 0px 0px 200px var(--t2);
+  }
+}

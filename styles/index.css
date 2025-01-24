@@ -70,63 +70,72 @@ body, html {
   transform: rotate(45deg);
  }
 
- .cd1, .cd2, .cd3, .cd4, .cd5, .cd6, .cd7, .cd8, .cd9 {
+.cd-wrapper {
   position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  width: 70px;
-  height: 70px;
   font-size: 160%;
-
-  border: 1px solid var(--t1);
-  background-color: var(--bg);
-  box-shadow: 0px 0px 50px var(--t2);
-
-  transition: ease-out 0.5s;
+  transition: ease-out 1s;
 }
 
-.cd1:hover, .cd2:hover, .cd4:hover {
-  border: 1px solid var(--t2);
-  background-color: var(--bg);
-  box-shadow: 0px 0px 100px var(--t1);
+.cd-appeared {
+  border: 1px solid transparent;
+  width: 5px;
+  box-sizing: border-box;
+  height: 5px;
+  background-color: var(--fg);
+  box-shadow: 0px 0px 50px var(--fg);
+  animation: cd-appeared ease 4s forwards;
+  transition: ease-out 1s;
 }
 
-.cd1 {
+.cd-1-wrapper {
   transform: translate(-50%, -0%);
   top: 10px;
   left: 50%;
 }
 
-.cd2 {
+.cd-2-wrapper {
   transform: translate(-0%, -50%);
-  top: 30%;
+  top: 25%;
   right: 10px;
 }
 
-.cd3 {
+.cd-3-wrapper {
   transform: translate(-0%, 50%);
-  bottom: 30%;
+  bottom: 25%;
   right: 10px;
 }
 
-.cd4 {
+.cd-4-wrapper {
   transform: translate(-0%, -50%);
-  top: 30%;
+  top: 25%;
   left: 10px;
 }
 
-.cd5 {
+.cd-5-wrapper {
   transform: translate(-0%, 50%);
-  bottom: 30%;
+  bottom: 25%;
   left: 10px;
 }
 
-.cd6 {
+.cd-6-wrapper {
   transform: translate(-50%, -0%);
   bottom: 10px;
   left: 50%;
+}
+
+.cd-7-wrapper {
+  transform: translate(-0%, -50%);
+  top: 50%;
+  left: 10px;
+}
+
+.cd-8-wrapper {
+  transform: translate(-0%, -50%);
+  top: 50%;
+  right: 10px;
 }
