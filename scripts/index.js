@@ -39,7 +39,7 @@ function cdClicked(event) {
   const circleContainer = document.querySelector('.circle-container');
 
   if (cd === previousCd) {
-    cdPreviewClicked();
+    cdWrapperContainerShrink()
   } else {
     cd.classList.add('cd-clicked');
     cd.classList.add('cd-preview');    
@@ -63,10 +63,6 @@ function cdClicked(event) {
       previousCd.style.boxShadow = '0px 0px 100px var(--t1), 0px 0px 200px var(--t2)';
     }
   }
-}
-
-function cdPreviewClicked() {
-  cdWrapperContainerShrink()
 }
 
 function cdWrapperContainerShrink() {
@@ -97,14 +93,12 @@ function cdWrapperContainerExpand() {
   wrapperContainer.classList.remove('js-cd-wrapper-container-shrink');
 
   cds.forEach(e => {
-    e.style.boxShadow = '0px 0px 100px var(--t1), 0px 0px 200px var(--t2)';
     e.style.backgroundColor = 'var(--bg)';
+    e.style.boxShadow = '0px 0px 100px var(--t1), 0px 0px 200px var(--t2)';
+    e.style.border = 'solid 1px var(--t1)';
+    e.style.color = 'var(--fg)';
   })
 
-  clickedCd.style.backgroundColor = 'var(--bg)';
-  clickedCd.style.boxShadow = '0px 0px 100px var(--t1), 0px 0px 200px var(--t2)';
-  clickedCd.style.border = 'solid 1px var(--t1)';
-  clickedCd.style.color = 'var(--fg)';
 }
 
 const mainCircle = document.querySelector('.js-main-circle');
