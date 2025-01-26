@@ -313,7 +313,7 @@
   }
   100% {
     border-radius: 50%;
-    background-color: var(--bg);
+    background-color: transparent;
     border: solid 1px var(--t2);
     width: 100px;
     height: 100px;
