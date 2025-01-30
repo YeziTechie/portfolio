@@ -39,7 +39,9 @@ function cdClicked(event) {
   const circleContainer = document.querySelector('.circle-container');
 
   if (cd === previousCd) {
-    cdWrapperContainerShrink()
+    cdWrapperContainerShrink();
+    contentExpand(cd.dataset.cdNumber);
+    circleContainer.style.display = 'none';
   } else {
     cd.classList.add('cd-clicked');
     cd.classList.add('cd-preview');    
@@ -65,6 +67,16 @@ function cdClicked(event) {
   }
 }
 
+function contentExpand(number) {
+  const content = document.querySelector(`.js-content-${number}`);
+  content.classList.add('content-expanded');
+}
+
+function contentShrink(number) {
+  const content = document.querySelector(`.js-content-${number}`);
+  content.classList.remove('content-expanded');
+}
+
 function cdWrapperContainerShrink() {
   const wrapperContainer = document.querySelector('.cd-wrapper-container');
   const cds = document.querySelectorAll('.cd-clicked');
@@ -88,6 +100,7 @@ function cdWrapperContainerExpand() {
   const wrapperContainer = document.querySelector('.cd-wrapper-container');
   const cds = document.querySelectorAll('.cd-clicked');
   const clickedCd = document.querySelector('.cd-preview');
+  const contentExpanded = document.querySelector('.content-expanded')
 
   wrapperContainer.classList.remove('cd-wrapper-container-shrink');
   wrapperContainer.classList.remove('js-cd-wrapper-container-shrink');
