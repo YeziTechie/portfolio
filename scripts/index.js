@@ -1,22 +1,10 @@
-function chaoticBoxShadow () {
-  const ran1 = '#' + Math.floor(Math.random()*16777215).toString(16);
-  const ran2 = '#' + Math.floor(Math.random()*16777215).toString(16);
-
-  let data = `
-  0px 0px 100px ${ran1},
-  0px 0px 250px ${ran2}
-  `;
-
-  return data;
-}
-
 function mainCircleClicked(event) {
   event.currentTarget.classList.add('main-circle-clicked');
 
   setTimeout(() => {
     const circle = document.querySelector('.circle-container-js');
     circle.style.display = 'grid';
-    setTimeout(() => {circle.style.opacity = '1';}, 1);
+    setTimeout(() => {circle.style.opacity = '1';}, 1000);
   }, 1);
 };
 
@@ -46,11 +34,13 @@ function cdClicked(event) {
     cd.classList.add('cd-clicked');
     cd.classList.add('cd-preview');    
 
-    cd.style.boxShadow = chaoticBoxShadow();
+    cd.style.border = 'solid 1px var(--t1)';
+    cd.style.boxShadow = '0px 0px 70px var(--t2)';
     circleContainer.style.transform = 'rotate(45deg) scale(0.6, 0.6)';
 
     content.style.display = 'block';
     setTimeout(() => {
+      content.style.color = 'var(--fg)';
       content.style.opacity = '1';
       content.style.transform = 'rotate(-315deg)';
     }, 1);
@@ -59,22 +49,31 @@ function cdClicked(event) {
       previousCd.classList.remove('cd-preview');
       const preContent = previousCd.querySelector('.cd-content');
       
+      preContent.style.color = 'var(--t1)';
       preContent.style.opacity = '0';
       preContent.style.transform = 'rotate(0deg) scale(0.4, 0.4)';
 
-      previousCd.style.boxShadow = '0px 0px 100px var(--t1), 0px 0px 200px var(--t2)';
+      previousCd.style.border = '1px solid var(--t2)';
+      previousCd.style.boxShadow = 'none';
     }
   }
 }
 
 function contentExpand(number) {
   const content = document.querySelector(`.js-content-${number}`);
+
+  content.style.animation = 'content-expansion forwards 1s';
   content.classList.add('content-expanded');
+  setTimeout( () => {content.querySelector('.content-div').style.opacity = '1'}, 1000);
 }
 
 function contentShrink(number) {
   const content = document.querySelector(`.js-content-${number}`);
-  content.classList.remove('content-expanded');
+  content.querySelector('.content-div').style.opacity = '0';
+  
+  content.style.animation = 'content-shrink forwards 5s';
+  setTimeout(() => {content.classList.remove('content-expanded')}, 5000);
+
 }
 
 function cdWrapperContainerShrink() {
@@ -91,24 +90,20 @@ function cdWrapperContainerShrink() {
   })
 
   clickedCd.style.backgroundColor = 'var(--bg)';
-  clickedCd.style.boxShadow = '0px 0px 200px var(--fg)';
-  clickedCd.style.border = 'solid 2px var(--fg)';
   clickedCd.style.color = 'transparent';
 }
 
 function cdWrapperContainerExpand() {
   const wrapperContainer = document.querySelector('.cd-wrapper-container');
   const cds = document.querySelectorAll('.cd-clicked');
-  const clickedCd = document.querySelector('.cd-preview');
-  const contentExpanded = document.querySelector('.content-expanded')
+  const contentNumber = document.querySelector('.cd-preview').dataset.cdNumber;
 
   wrapperContainer.classList.remove('cd-wrapper-container-shrink');
   wrapperContainer.classList.remove('js-cd-wrapper-container-shrink');
+  contentShrink(contentNumber)
 
   cds.forEach(e => {
     e.style.backgroundColor = 'var(--bg)';
-    e.style.boxShadow = '0px 0px 100px var(--t1), 0px 0px 200px var(--t2)';
-    e.style.border = 'solid 1px var(--t1)';
     e.style.color = 'var(--fg)';
   })
 
