@@ -7,20 +7,20 @@ function mainCircleClicked(event) {
     circle.style.visibility = 'visible';
     setTimeout(() => {
       circle.style.opacity = '1';
-    }, 7000);
+    }, 1000);
   }, 1);
 };
 
 function circlesClicked(event) {
   const circle = event.currentTarget;
-  circle.style.animation = 'circle-clicked 5s ease forwards'; 
+  circle.style.animation = 'circle-clicked 1s ease forwards'; 
   circle.style.animationFillMode = 'forwards';
 
   const cd = document.querySelector(`.js-cd-${circle.dataset.cNumber}`);
   setTimeout(() => {
     cd.classList.add('cd-appeared');
-    setTimeout(() => {cd.classList.add('cd-clicked')}, 4000);
-  }, 4500)
+    setTimeout(() => {cd.classList.add('cd-clicked')}, 1000);
+  }, 1500)
 };
 
 function cdClicked(event) {
@@ -73,7 +73,6 @@ function cdClicked(event) {
 function contentExpand(number) {
   const content = document.querySelector(`.js-content-${number}`);
 
-  content.style.animation = 'content-expansion forwards 1s';
   content.classList.add('content-expanded');
   setTimeout( () => {content.querySelector('.content-div').style.opacity = '1'}, 1000);
 }

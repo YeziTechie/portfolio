@@ -36,7 +36,7 @@ body, html {
 }
 
 .main-circle-clicked {
-  animation: main-circle-clicked 8s ease 1;
+  animation: main-circle-clicked 1s ease 1;
   animation-fill-mode: forwards;
 }
 
@@ -139,7 +139,7 @@ body, html {
   box-sizing: border-box;
   height: 100px;
   background-color: var(--fg);
-  animation: cd-appeared ease 5s forwards;
+  animation: cd-appeared ease 1s forwards;
   transition: all ease-out 3s;
   display: flex;
   flex-direction: column;
@@ -203,15 +203,24 @@ body, html {
 
 .content-expanded {
   position: fixed;
-  top: calc(100% - 15px);
   display: block;
   box-sizing: border-box;
   z-index: 20;
   margin: 0 auto;
-  animation: content-expansion 1s forwards;
+  animation: content-expansion 5s forwards;
   transition: 3s all ease;
-  opacity: 0;
   min-width: 2px;
+
+  opacity: 1;
+  border: solid 1px var(--t2);
+  box-shadow: 0px 0px 200px var(--t1);
+  overflow: auto;
+
+  top: 250px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
 }
 
 
