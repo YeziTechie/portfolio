@@ -78,96 +78,29 @@
 }
 
 @keyframes cd-appeared {
-
   0% {
-    transform: rotate(20deg);
-    background-color: var(--bg);
-    border: solid 1px var(--t2);
-    width: 10px;
-    height: 10px;
-    box-shadow: 0px 0px 50px var(--t1);
-  }
-  10% {
-    transform: rotate(-20deg);
-    background-color: var(--bg);
-    border: solid 1px var(--t1);
-    width: 20px;
-    height: 20px;
-    box-shadow: 0px 0px 50px var(--t2);
-  }
-  20% {
-    transform: rotate(20deg);
-    background-color: var(--bg);
-    border: solid 1px var(--t2);
-    width: 30px;
-    height: 30px;
-    box-shadow: 0px 0px 50px var(--t1);
-  }
-  30% {
-    transform: rotate(-20deg);
-    background-color: var(--bg);
-    border: solid 1px var(--t1);
-    width: 40px;
-    height: 40px;
-    box-shadow: 0px 0px 50px var(--t2);
+    transform: scale(0);
+    background-color: var(--fg);
+
   }
   40% {
-    transform: rotate(20deg);
-    background-color: var(--bg);
-    border: solid 1px var(--t2);
-    width: 50px;
-    height: 50px;
-    box-shadow: 0px 0px 50px var(--t1);
-  }
-  50% {
-    transform: rotate(-20deg);
-    background-color: var(--bg);
-    border: solid 1px var(--t1);
-    width: 60px;
-    height: 60px;
+    transform: scale(1, 1) rotate(520deg);
+    background-color: transparent;
+    border: 1px solid var(--t1);
     box-shadow: 0px 0px 50px var(--t2);
   }
-  60% {
-    transform: rotate(20deg);
-    background-color: var(--bg);
-    border: solid 1px var(--t2);
-    width: 70px;
-    height: 70px;
-    box-shadow: 0px 0px 50px var(--t1);
+
+  45% {
+    border-radius: 0;
   }
-  70% {
-    transform: rotate(-20deg);
-    background-color: var(--bg);
-    border: solid 1px var(--t2);
-    width: 80px;
-    height: 80px;
-    box-shadow: 0px 0px 50px var(--t2);
-  }
-  80% {
-    transform: rotate(20deg);
-    border-radius: 10%;
-    background-color: var(--bg);
-    border: solid 1px var(--t1);
-    width: 90px;
-    height: 90px;
-    box-shadow: 0px 0px 50px var(--t1);
-  }
-  90% {
-    transform: rotate(-20deg);
-    border-radius: 30%;
-    background-color: var(--bg);
-    border: solid 1px var(--t2);
-    width: 100px;
-    height: 100px;
-    box-shadow: 0px 0px 50px var(--t2);
-  }
+
   100% {
     border-radius: 50%;
+    box-shadow: 0px 0px 100px transparent;
     background-color: transparent;
-    border: solid 1px var(--t2);
-    width: 100px;
-    height: 100px;
+    border: 1px solid var(--t2);
   }
+
 }
 
 @keyframes content-expansion {
