@@ -1,10 +1,14 @@
 function mainCircleClicked(event) {
-  event.currentTarget.classList.add('main-circle-clicked');
+  const mainCircle = event.currentTarget
+  mainCircle.classList.add('main-circle-clicked');
 
   setTimeout(() => {
     const circle = document.querySelector('.circle-container-js');
-    circle.style.display = 'grid';
-    setTimeout(() => {circle.style.opacity = '1';}, 1000);
+    circle.style.visibility = 'visible';
+    setTimeout(() => {
+      circle.style.opacity = '1';
+      // mainCircle.style.display = 'none';
+    }, 7000);
   }, 1);
 };
 
@@ -25,6 +29,14 @@ function cdClicked(event) {
   const content = cd.querySelector('.cd-content');
   const previousCd = document.querySelector('.cd-preview');
   const circleContainer = document.querySelector('.circle-container');
+
+    
+  const cdWrapperContainer = document.querySelector('.cd-wrapper-container');
+  cdWrapperContainer.addEventListener('click', () => {
+    if (cdWrapperContainer.classList.contains('js-cd-wrapper-container-shrink')) {
+      cdWrapperContainerExpand()
+    }
+  })
 
   if (cd === previousCd) {
     cdWrapperContainerShrink();
@@ -114,14 +126,6 @@ mainCircle.addEventListener('click', mainCircleClicked)
 
 const cd = document.querySelectorAll('.cd');
 cd.forEach(e => {e.addEventListener('click', cdClicked);});
-
-const cdWrapperContainer = document.querySelector('.cd-wrapper-container');
-cdWrapperContainer.addEventListener('click', () => {
-  if (cdWrapperContainer.classList.contains('js-cd-wrapper-container-shrink')) {
-    cdWrapperContainerExpand()
-    console.log('asdf')
-  }
-})
 
 const circles = document.querySelectorAll('.js-2-circle');
 circles.forEach(e => {e.addEventListener('click', circlesClicked)});
