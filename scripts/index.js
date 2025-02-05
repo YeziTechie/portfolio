@@ -7,14 +7,13 @@ function mainCircleClicked(event) {
     circle.style.visibility = 'visible';
     setTimeout(() => {
       circle.style.opacity = '1';
-      // mainCircle.style.display = 'none';
-    }, 7000);
+    }, 1000);
   }, 1);
 };
 
 function circlesClicked(event) {
   const circle = event.currentTarget;
-  circle.style.animation = 'circle-clicked 1s ease 1'; 
+  circle.style.animation = 'circle-clicked 5s ease forwards'; 
   circle.style.animationFillMode = 'forwards';
 
   const cd = document.querySelector(`.js-cd-${circle.dataset.cNumber}`);
