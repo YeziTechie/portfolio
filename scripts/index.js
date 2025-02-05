@@ -73,6 +73,7 @@ function cdClicked(event) {
 function contentExpand(number) {
   const content = document.querySelector(`.js-content-${number}`);
 
+  content.style.animationName = 'content-expansion';
   content.classList.add('content-expanded');
   setTimeout( () => {content.querySelector('.content-div').style.opacity = '1'}, 1000);
 }
@@ -81,8 +82,11 @@ function contentShrink(number) {
   const content = document.querySelector(`.js-content-${number}`);
   content.querySelector('.content-div').style.opacity = '0';
   
-  content.style.animation = 'content-shrink forwards 5s';
-  setTimeout(() => {content.classList.remove('content-expanded')}, 5000);
+  content.style.animationName = 'content-shrink';
+  setTimeout(() => {
+    content.classList.remove('content-expanded');
+    content.style.animationName = 'content-expansion';
+   }, 3100);
 
 }
 
@@ -92,7 +96,9 @@ function cdWrapperContainerShrink() {
   const clickedCd = document.querySelector('.cd-preview');
 
   wrapperContainer.classList.add('cd-wrapper-container-shrink');
-  setTimeout(() => {wrapperContainer.classList.add('js-cd-wrapper-container-shrink')}, 10);
+  wrapperContainer.style.pointerEvents = 'none';
+  setTimeout(() => {wrapperContainer.classList.add('js-cd-wrapper-container-shrink')}, 1);
+  setTimeout(() => {wrapperContainer.style.pointerEvents = 'auto'}, 3000);
 
   cds.forEach(e => {
     e.style.boxShadow = 'none';
@@ -107,6 +113,9 @@ function cdWrapperContainerExpand() {
   const wrapperContainer = document.querySelector('.cd-wrapper-container');
   const cds = document.querySelectorAll('.cd-clicked');
   const contentNumber = document.querySelector('.cd-preview').dataset.cdNumber;
+
+  wrapperContainer.style.pointerEvents = 'none';
+  setTimeout(() => {wrapperContainer.style.pointerEvents = 'auto'}, 3000);
 
   wrapperContainer.classList.remove('cd-wrapper-container-shrink');
   wrapperContainer.classList.remove('js-cd-wrapper-container-shrink');

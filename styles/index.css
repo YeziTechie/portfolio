@@ -207,7 +207,7 @@ body, html {
   box-sizing: border-box;
   z-index: 20;
   margin: 0 auto;
-  animation: content-expansion 5s forwards;
+  animation: content-expansion 3s forwards;
   transition: 3s all ease;
   min-width: 2px;
 
