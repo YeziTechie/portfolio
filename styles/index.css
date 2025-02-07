@@ -234,7 +234,7 @@ body, html {
 
 .content-expanded::-webkit-scrollbar-thumb {
   background-color: var(--bg);
-  border-left: 3px solid var(--t2);  
+  border-left: 3px solid var(--t1);  
 }
 
 .content-div {
