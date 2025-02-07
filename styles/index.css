@@ -199,6 +199,7 @@ body, html {
 
 .content {
   display: none;
+  font-size: 20px;
 }
 
 .content-expanded {
@@ -215,7 +216,8 @@ body, html {
   border: solid 1px var(--t2);
   box-shadow: 0px 0px 200px var(--t1);
   overflow: auto;
-
+  
+  max-width: 800px;
   top: 250px;
   left: 10px;
   right: 10px;
@@ -239,4 +241,22 @@ body, html {
   color: var(--fg);
   opacity: 0;
   transition: all ease 4s;
+}
+
+.call-to-contact-me {
+  margin: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.call-to-contact-me button {
+  border: 1px solid var(--t1);
+  box-shadow: 0px 0px 30px var(--t2);
+  padding: 10px;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-weight: bold;
+  font-size: 22px;
 }
