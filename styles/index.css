@@ -240,7 +240,7 @@ body, html {
 .content-div {
   color: var(--fg);
   opacity: 0;
-  transition: all ease 4s;
+  transition: all ease 2s;
 }
 
 /* about me */
@@ -300,4 +300,61 @@ body, html {
   height: 1px;
   margin: 10px auto;
   background-color: var(--t1);
+}
+
+/* contact me */
+
+.contact-me .box {
+  margin-top: 100px;
+  display: flex; flex-direction: column; 
+  justify-content: center; align-items: center;
+  width: 100%;
+}
+
+.box .row {
+  display: flex; flex-direction: row;
+  justify-content: center; align-items: center;
+  width: 100%;
+
+}
+
+.box .icon, .box .title, .box .button {
+  width: 100px; height: 100px;
+  text-align: center;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; align-items: center;
+}
+
+.github-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.linkedin-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.button a, .button button {
+  border: 1px solid var(--t1);
+  box-shadow: 0px 0px 80px var(--t2);
+  padding: 10px;
+  text-decoration: none;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-size: 16px;
+}
+
+a:visited {
+  color: var(--fg);
+}
+
+.email {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+
+  margin-top: 30px;
+  row-gap: 20px;
 }
