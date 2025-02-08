@@ -86,7 +86,7 @@ function contentShrink(number) {
   setTimeout(() => {
     content.classList.remove('content-expanded');
     content.style.animationName = 'content-expansion';
-   }, 3100);
+   }, 2000);
 
 }
 
@@ -112,7 +112,7 @@ function cdWrapperContainerShrink() {
 function cdWrapperContainerExpand() {
   const wrapperContainer = document.querySelector('.cd-wrapper-container');
   const cds = document.querySelectorAll('.cd-clicked');
-  const contentNumber = document.querySelector('.cd-preview').dataset.cdNumber;
+  const contentNumber = document.querySelector('.content-expanded').dataset.contentNumber;
 
   wrapperContainer.style.pointerEvents = 'none';
   setTimeout(() => {wrapperContainer.style.pointerEvents = 'auto'}, 3000);
