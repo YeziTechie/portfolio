@@ -243,6 +243,8 @@ body, html {
   transition: all ease 4s;
 }
 
+/* about me */
+
 .call-to-contact-me {
   margin: 50px 0px;
   display: flex;
@@ -259,4 +261,43 @@ body, html {
   color: var(--fg);
   font-weight: bold;
   font-size: 22px;
+}
+
+.about-me {
+  padding-top: 0;
+}
+
+.about-me .header {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.about-me .header .name {
+  font-size: 26px;
+}
+
+.about-me .header .horizantol-line {
+  width: 1px;
+  height: 30px;
+  margin: 10px 0px;
+  background-color: var(--t2);
+}
+
+.about-me .header .position {
+  font-size: 20px;
+  background: -webkit-linear-gradient(left ,var(--t2), var(--t1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-me .vertical-line {
+  width: 30px;
+  height: 1px;
+  margin: 10px auto;
+  background-color: var(--t1);
 }
