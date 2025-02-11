@@ -243,6 +243,7 @@ body, html {
   transition: all ease 2s;
 }
 
+
 /* about me */
 
 .call-to-contact-me {
@@ -273,8 +274,6 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
 }
 
 .about-me .header .name {
@@ -357,4 +356,55 @@ a:visited {
 
   margin-top: 30px;
   row-gap: 20px;
+}
+
+/* download resume */
+
+.download-resume .header {
+  font-size: 26px;
+  text-align: center;
+}
+
+.download {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  row-gap: 20px;
+
+  min-width: 160px;
+  margin-top: 100px;
+}
+
+.download .title {
+  min-width: max-content;
+}
+
+.download .button, .download .title {
+  display: flex;flex-direction: column;
+  justify-content: center; align-items: center;
+  max-width: 160px;
+  
+  width: 100%;
+}
+
+.download .button button {
+  width: 100%;
+}
+
+
+button {
+  transition: ease 2s;
+}
+
+button:active {
+  transition: ease 0.05s;
+  color: transparent;
+  border: 1px solid var(--t2);
+  box-shadow: none;
+}
+
+button:hover {
+  transition: ease .4s;
+  color: transparent;
+  border: 1px solid var(--t2);
+  box-shadow: 0px 0px 80px var(--t1);
 }
