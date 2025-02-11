@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="main-circle js-main-circle"></div>
+      <div class="main-circle js-main-circle" style="display: none;"></div>
 
       <div class="circle-container circle-container-js">
         <div class="c1 js-2-circle" data-c-number="1"></div>
@@ -83,6 +83,7 @@
         </div>
       </div>
 
+      <!-- about me -->
       <div class="content content-1 js-content js-content-1" data-content-number="1">
         <section class="content-div about-me">
           <header>
@@ -139,14 +140,57 @@
         </section>
       </div>
       
-      <div class="content content-2 js-content js-content-2" data-content-number="2">
+      <!-- skills -->
+      <div class="content content-2 js-content js-content-2 content-expanded" data-content-number="2">
         <section class="content-div skills">
           <header>
             <h2>
               Skills
             </h2>
           </header>
-          <div class="skill-container"></div>
+
+          <div class="skill-container">
+
+            <div class="skill">
+              <div class="name"><h2>Back-End</h2></div>
+              <div class="technologies">
+                <div class="tech"><h4>Flask</h4></div>
+                <div class="tech"><h4>Django</h4></div>
+                <div class="tech"><h4>DRF</h4></div>
+                <div class="tech"><h4>Future</h4></div>
+                <div class="tech"><h4>Future</h4></div>
+                <div class="tech"><h4>Future</h4></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="name"><h2>Back-End</h2></div>
+              <div class="technologies">
+                <div class="tech"><h4>Flask</h4></div>
+                <div class="tech"><h4>Django</h4></div>
+                <div class="tech"><h4>DRF</h4></div>
+                <div class="tech"><h4>Future</h4></div>
+              </div>
+              <div class="tech-detail-container">
+                <div class="tech-detail"></div>
+                <div class="tech-detail"></div>
+                <div class="tech-detail"></div>
+                <div class="tech-detail"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="name"><h2>Back-End</h2></div>
+              <div class="technologies">
+                <div class="tech"><h4>Flask</h4></div>
+                <div class="tech"><h4>Django</h4></div>
+                <div class="tech"><h4>DRF</h4></div>
+                <div class="tech"><h4>Future</h4></div>
+              </div>
+            </div>
+
+          </div>
+
         </section>
       </div>
 
@@ -186,6 +230,7 @@
         </section>
       </div>
 
+      <!-- contact me -->
       <div class="content content-8 js-content js-content-8" data-content-number="8">
         <section class="content-div contact-me">
           <header>
@@ -209,7 +254,7 @@
           <div class="email">
             <div class="text">yazdanthedeveloper@gmail.com</div>
             <div class="button">
-              <button onclick="navigator.clipboard.writeText('yazdanthedeveloper@gmail.com'); this.innerHTML = 'Copied!'">
+              <button onclick="navigator.clipboard.writeText('yazdanthedeveloper@gmail.com'); this.innerHTML = 'Copied!'; setTimeout(() => {this.innerHTML = 'Copy';}, 2000)">
                 Copy
               </button>
             </div>
