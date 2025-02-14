@@ -16,10 +16,18 @@ function skillShrink(skill) {
   const number = skill.dataset.number
   const tech = document.querySelector(`.js-technologies-${number}`);
   const techDetail = document.querySelector(`.js-tech-detail-container-${number}`);
+  const techContents = tech.querySelectorAll('.tech');
 
   tech.style.visibility = 'hidden';
   tech.style.opacity = '0';
   techDetail.style.transform = 'scale(0.1, 0.1) rotate(360deg)';
+  techContents.forEach(element => {
+    const h4 = element.querySelector('h4')
+    if (h4.classList.contains('toggle')) {
+      techShrink(h4);
+    }
+  })
+
 }
 
 function skillToggle (skill) {
@@ -29,7 +37,6 @@ function skillToggle (skill) {
     skillExpand(skill);
   }
 }
-
 
 
 
@@ -49,6 +56,23 @@ function techExpand(tech) {
   }, 1)
 }
 
+function techShrink(tech) {
+  tech.classList.remove('toggle');
+
+  const number = tech.dataset.number
+  const techDetail = document.querySelector(`.js-tech-detail-${number}`);
+  const techContent = techDetail.querySelector('.tech-content');
+
+  techDetail.classList.remove('tech-detail-expanded');
+  techContent.style.opacity = '0'; 
+  techContent.style.fontSize = '1px'; 
+  techContent.style.padding = '0'; 
+  setTimeout(() => {
+    techContent.style.display = 'none';
+  }, 1)
+}
+
+
 // function skillShrink(skill) {
 //   skill.classList.remove('toggle');
 
@@ -63,11 +87,9 @@ function techExpand(tech) {
 
 function techToggle (tech) {
   if (tech.classList.contains('toggle')) {
-    // techShrink(tech);
-    console.log('master your mind')
+    techShrink(tech);
   } else {
     techExpand(tech);
-    console.log('master your heart')
   }
 }
 
