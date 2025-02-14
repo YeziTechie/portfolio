@@ -140,3 +140,34 @@
     opacity: 0;
   }
 }
+
+@keyframes playful-border-color {
+  0% {
+    border: transparent 1px solid;
+  }
+  20% {
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid var(--t1);
+  }
+  40% {
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid var(--t1);
+  }
+  60% {
+    border-top: 1px solid transparent;
+    border-left: 1px solid var(--t1);
+    box-shadow: 0px 0px 0px transparent;
+  }
+
+  80% {
+    border-top: 1px solid var(--t1);
+    box-shadow: 0px 0px 50px var(--t2);
+    border-right: 1px solid transparent;
+  }
+
+  100% {
+    box-shadow: 0px 0px 0px transparent;
+    border: 1px solid transparent;
+  }
+
+}

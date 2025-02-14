@@ -228,10 +228,8 @@ header {
   opacity: 1;
   border: solid 1px var(--t2);
   box-shadow: 0px 0px 200px var(--t1);
-  overflow: auto;
-  
-  max-width: 800px;
-  width: 100%;
+  overflow-y: auto;
+
   top: 250px;
   left: 10px;
   right: 10px;
@@ -255,6 +253,7 @@ header {
   color: var(--fg);
   opacity: 1;
   transition: all ease 2s;
+  width: 100%;
 }
 
 
@@ -413,26 +412,55 @@ a:visited {
 }
 
 .technologies {
-  display: flex; flex-direction: row;
+  display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: ease all 2s;
 }
 
 .tech-detail-container {
-  margin-top: 15px;
-  display: flex; flex-direction: column; row-gap: 10px; flex-wrap: wrap;
+  display: flex; flex-direction: column; row-gap: 10px;
   justify-content: center; align-items: center;
+
+  width: 100%; height: 100%;
+  overflow: auto;
+  margin-top: 15px;
+
+  transform: scale(0.1, 0.1) rotate(360deg);
+  transition: ease all 2s;
 }
 
 .tech-detail {
   width: 10px; height: 10px; box-sizing: border-box;
   border: 1px solid var(--t1);
+  transition: ease all 2s;
+}
+
+.tech-content {
+  transition: ease all 2s;
+  font-size: 1px;
+  display: none;
+  opacity: 0;
+}
+
+.tech-detail-expanded {
+  width: 100%; height: 100%;
 }
 
 .skill .name h2, .skill .tech h4 {
+  transition: 0.7s ease-out all;
   border: 1px solid var(--t1);
-  border-radius: 10px;
   padding: 15px;
   text-align: center;
+}
 
+.skill .name h2.toggle, .skill .tech h4.toggle {
+  transition: 1s ease-out all;
+  border: 1px solid transparent;
+  animation: playful-border-color 4s 1000 normal;
+  animation-delay: 1s;
+  padding: 15px;
+  text-align: center;
 }
 
 
