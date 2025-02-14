@@ -502,4 +502,8 @@ button:hover {
   box-shadow: 0px 0px 80px var(--t1);
 }
 
+li {
+  margin-bottom: 1rem;
+}
+
 
