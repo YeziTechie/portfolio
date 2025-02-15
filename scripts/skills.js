@@ -43,8 +43,10 @@ function skillToggle (skill) {
 function techExpand(tech) {
   tech.classList.add('toggle');
 
-  const number = tech.dataset.number
-  const techDetail = document.querySelector(`.js-tech-detail-${number}`);
+  const skill = tech.dataset.skill;
+  const number = tech.dataset.number;
+  const skillDiv = document.getElementById(skill);
+  const techDetail = skillDiv.querySelector(`.js-tech-detail-${number}`);
   const techContent = techDetail.querySelector('.tech-content');
 
   techDetail.classList.add('tech-detail-expanded');
@@ -59,8 +61,10 @@ function techExpand(tech) {
 function techShrink(tech) {
   tech.classList.remove('toggle');
 
-  const number = tech.dataset.number
-  const techDetail = document.querySelector(`.js-tech-detail-${number}`);
+  const skill = tech.dataset.skill;
+  const number = tech.dataset.number;
+  const skillDiv = document.getElementById(skill);
+  const techDetail = skillDiv.querySelector(`.js-tech-detail-${number}`);
   const techContent = techDetail.querySelector('.tech-content');
 
   techDetail.classList.remove('tech-detail-expanded');

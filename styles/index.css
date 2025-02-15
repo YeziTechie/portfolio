@@ -433,7 +433,7 @@ a:visited {
 .tech-detail {
   width: 10px; height: 10px; box-sizing: border-box;
   border: 1px solid var(--t1);
-  transition: ease border 3s;
+  transition: ease 3s;
 }
 
 .tech-content {
