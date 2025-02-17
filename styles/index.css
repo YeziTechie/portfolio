@@ -296,7 +296,7 @@ header {
   background-color: var(--t2);
 }
 
-.about-me .header .position {
+.position {
   background: -webkit-linear-gradient(left ,var(--t2), var(--t1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
