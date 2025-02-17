@@ -16,9 +16,27 @@ function blackWhite() {
     bButton.classList.remove('toggle');
     root.style.setProperty('--bg', 'rgb(216, 216, 216)');
     root.style.setProperty('--fg', 'black');
-    
   }
+}
+
+function changeTheme(theme) {
+  const root = document.querySelector(':root');
+  const rootStyle = getComputedStyle(root);
+
+  const themeColor = theme.dataset.themeColor;
+  const themeNumber = theme.dataset.themeNumber;
+
+  const colorOne = rootStyle.getPropertyValue(`--${themeColor}-${themeNumber}-1`);
+  const colorTwo = rootStyle.getPropertyValue(`--${themeColor}-${themeNumber}-2`);
+
+  root.style.setProperty('--t1', colorOne);
+  root.style.setProperty('--t2', colorTwo);
 }
 
 const button = document.querySelector('.black-white');
 button.addEventListener('click', blackWhite);
+
+const themes = document.querySelectorAll('.js-theme')
+themes.forEach(theme => {
+  theme.addEventListener('click', () => changeTheme(theme))
+})
