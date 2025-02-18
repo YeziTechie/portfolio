@@ -74,7 +74,7 @@ const button = document.querySelector('.black-white');
 button.addEventListener('click', () => {
   blackWhite();
   button.style.pointerEvents = 'none';
-  setTimeout(() => {button.style.pointerEvents = 'auto'}, 2000);
+  setTimeout(() => {button.style.pointerEvents = 'auto'}, 4000);
 });
 
 const themes = document.querySelectorAll('.js-theme')
