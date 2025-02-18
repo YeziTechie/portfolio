@@ -18,22 +18,23 @@
   --white-3-1: #2E7D32;
   --white-3-2: #C8E6C9; */
 
-  --black-1-1: #2196F3;
-  --black-1-2: #90CAF9;
-  --black-2-1: #8E24AA;
+  --black-1-1: #5c8a8a;
+  --black-1-2: #090083;
+  --black-2-1: #550055;
   --black-2-2: #CE93D8;
-  --black-3-1: #43A047;
-  --black-3-2: #A5D6A7;
+  --black-3-1: #66cc66;
+  --black-3-2: #006600;
 
-  --white-1-1: #000066;
-  --white-1-2: #669999;
-  --white-2-1: #6A1B9A;
-  --white-2-2: #E1BEE7;
-  --white-3-1: #2E7D32;
-  --white-3-2: #C8E6C9;
+  --white-1-1: #700000;
+  --white-1-2: #5e4c00;
+  --white-2-1: #00352c;
+  --white-2-2: #053600;
+  --white-3-1: black;
+  --white-3-2: #313131;
 } 
 
 body, html {
+  transition: ease all 0.5s;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -41,7 +42,6 @@ body, html {
   color: var(--fg);
   font-family: monospace;
   font-size: 16px;
-  transition: ease all 0.5s;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -532,7 +532,13 @@ a:visited {
 .change-color-black, .change-color-white {
   display: flex; flex-direction: row; justify-content: space-around;
   width: 100%; height: 80px; margin-bottom: 50px;
+  transition: 2s all ease;
+}
 
+.change-color-white {
+  display: none;
+  opacity: 0;
+  transform: scale(0);
 }
 
 .theme {
@@ -541,8 +547,15 @@ a:visited {
   width: 60px; height: 60px; box-sizing: border-box;
 }
 
+.theme-clicked-animation {
+  animation: theme-square 2s 100;
+  animation-timing-function: ease-out;
+  animation-direction: normal;
+}
+
 .theme-square {
-  width: 30px; height: 30px; box-sizing: border-box;
+  width: 20px; height: 20px; box-sizing: border-box;
+  margin: 5px;
   background-color: var(--t1);
 }
 

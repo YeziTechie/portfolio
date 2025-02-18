@@ -171,3 +171,18 @@
   }
 
 }
+
+@keyframes theme-square {
+  0% {
+    
+  }
+  10% {
+    transform: rotate(0deg) scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(765deg) scale(1);
+    opacity: 1;
+  }
+}
