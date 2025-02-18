@@ -1,0 +1,30 @@
+.experiences, .experience {
+  display: flex; flex-direction: column; justify-content: center;
+  margin-top: 20px;
+}
+
+.experience {
+  border-left: 2px solid var(--t2);
+  border-bottom: 2px solid var(--t2);
+  box-shadow: 2px -2px 0px var(--t1);
+  transition: 1s all ease;
+}
+
+.experience:hover {
+  box-shadow: 10px -10px 30px var(--t1);
+}
+
+.title {
+  display: flex; flex-direction: row; align-items: center; justify-content: left;
+}
+
+.title .year {
+  transition: 2s all ease-in-out;
+  flex: 1;
+}
+
+.detail {
+  transition: 1s all ease-in-out;
+  height: 1px;
+  overflow: hidden;
+} 
