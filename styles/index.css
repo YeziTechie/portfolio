@@ -79,6 +79,7 @@ li {
 
 
 a {
+  color: var(--fg);
   text-decoration: underline 1px var(--t2);
 }
 
