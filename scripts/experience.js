@@ -9,8 +9,6 @@ function sampleClicked (element) {
 
     detail.style.height = '0px';
 
-    element.style.boxShadow = '2px -2px 0px var(--t1)';
-    element.style.fontSize = '1rem';
     element.classList.remove('toggle')
   } else {
     year.style.flex = '0';
@@ -20,8 +18,6 @@ function sampleClicked (element) {
     detail.style.height = 'calc-size(max-content, size)';
 
     element.classList.add('toggle')
-    element.style.boxShadow = '-10px 10px 30px var(--t1)';
-    element.style.fontSize = '1.2rem';
   }
 }
 const experiences = document.querySelectorAll('.experience');

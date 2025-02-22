@@ -4,21 +4,26 @@
 }
 
 .experience {
-  border-left: 2px solid var(--t2);
-  border-bottom: 2px solid var(--t2);
-  box-shadow: 2px -2px 0px var(--t1);
+  border: 1px solid var(--t2);
   transition: 1s all ease;
+  font-size: 1rem;
 }
 
-.experience:hover {
-  box-shadow: 10px -10px 30px var(--t1);
+.experience.toggle {
+  border: 1px solid transparent;
+  border-left: 1px solid var(--t2);
+  font-size: 1.1rem;
 }
 
-.title {
+.experience.toggle .detail {
+  padding: 20px;
+}
+
+.header {
   display: flex; flex-direction: row; align-items: center; justify-content: left;
 }
 
-.title .year {
+.header .year {
   transition: 1s all ease-in-out;
   flex: 1;
 }
@@ -29,3 +34,16 @@
   overflow: hidden;
   font-size: 1rem;
 } 
+
+.sub-detail {
+  display: flex; flex-direction: column; justify-content: left;
+}
+
+.sub-detail .title h4 {
+  width: max-content;
+  padding: 10px; margin: 10px;
+  
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, var(--t2), transparent);
+}
