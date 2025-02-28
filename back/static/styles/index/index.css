@@ -56,7 +56,6 @@ header {
   text-align: center;
 }
 
-
 button {
   transition: ease 2s;
 }
@@ -68,12 +67,7 @@ button:active {
   box-shadow: none;
 }
 
-button:hover {
-  transition: ease .4s;
-  color: transparent;
-  border: 1px solid var(--t2);
-  box-shadow: 0px 0px 80px var(--t1);
-}
+
 
 li {
   margin-bottom: 1rem;
@@ -321,4 +315,9 @@ a:visited {
   width: 100%;
 }
 
-
+button:hover {
+  transition: ease 0.4s;
+  color: transparent;
+  border: 1px solid var(--t2);
+  box-shadow: 0px 0px 80px var(--t1);
+}

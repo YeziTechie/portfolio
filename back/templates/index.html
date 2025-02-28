@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>?</title>
-    <link rel="stylesheet" href="{% static '/styles/index/index.css' %}">
-    <link rel="stylesheet" href="{% static '/styles/index/contact-me.css' %}">
     <link rel="stylesheet" href="{% static '/styles/index/about-me.css' %}">
     <link rel="stylesheet" href="{% static '/styles/index/resume.css' %}">
     <link rel="stylesheet" href="{% static '/styles/index/settings.css' %}">
     <link rel="stylesheet" href="{% static '/styles/index/skills.css' %}">
     <link rel="stylesheet" href="{% static '/styles/index/experience-and-sample.css' %}">
     <link rel="stylesheet" href="{% static '/styles/index/key-frames.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/index/index.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/index/contact-me.css' %}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -472,7 +472,7 @@
                   <div class="links">
                     <div class="github">
                       <a href="https://github.com" target="_blank">
-                        <img src="../images/github.png" alt="GitHub icon" class="github-icon">
+                        <img src="{% static 'images/github.png' %}" alt="GitHub icon" class="github-icon">
                       </a>
                     </div>
                     <div class="website">
@@ -611,13 +611,13 @@
           <div class="box">
             <div class="row">
               <div class="icon" role="">
-                <img src="../images/github.png" alt="github icon" class="github-icon">
+                <img src="{% static 'images/github.png' %}" alt="github icon" class="github-icon">
               </div>
                 <a target="_blank" href="https://www.github.com/yezitechie">Open yezitechie Github</a>
             </div>
             <div class="row">
               <div class="icon">
-                <img src="../images/linkedin.png" alt="linkedin icon" class="linkedin-icon" >
+                <img src="{% static 'images/linkedin.png' %}" alt="linkedin icon" class="linkedin-icon" >
               </div>
                 <a target="_blank" href="https://www.linkedin.com/in/yezitechie">Open yezitechie Linkedin</a>
             </div>
