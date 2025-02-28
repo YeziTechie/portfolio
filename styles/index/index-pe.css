@@ -1,4 +1,5 @@
 html, body {
   font-family: "Noto Sans Arabic", serif, monospace;
   font-weight: 200;
+  direction: rtl;
 }
