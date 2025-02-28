@@ -1,12 +1,3 @@
-html, body {
-  font-family: "Noto Sans Arabic", serif, monospace;
-  font-weight: 200;
-}
-
-* {
-  font-family: "Noto Sans Arabic", serif, monospace;
-}
-
 .about-me, .tech-content {
   direction: rtl;
 }

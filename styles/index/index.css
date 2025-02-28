@@ -40,8 +40,11 @@ body, html {
   padding: 0;
   background-color: var(--bg);
   color: var(--fg);
-  font-family: monospace;
   font-size: 16px;
+}
+
+* {
+  font-family: "Thasadith", "Noto Sans Arabic", monospace, arial;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,8 +78,6 @@ button:hover {
 li {
   margin-bottom: 1rem;
 }
-
-
 
 a {
   color: var(--fg);
@@ -301,7 +302,6 @@ a:visited {
   bottom: 10px;
   padding: 10px;
 }
-
 
 .content-expanded::-webkit-scrollbar {
   transition: all ease 1s;
