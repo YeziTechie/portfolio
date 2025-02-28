@@ -1,8 +1,10 @@
+{% load static %}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/language/language.css">
+    <link rel="stylesheet" href="{% static '/styles/language/language.css' %}">
     <title>self mastery, when there is no self, is, mastery of universe itself</title>
   </head>
   <body>
@@ -32,6 +34,6 @@
 
     </div>
 
-    <script src="../scripts/language/language.js"></script>
+    <script src="{% static '/scripts/language/language.js' %}"></script>
   </body>
 </html>
