@@ -19,14 +19,14 @@
 
       <div class="language">
         <div class="l">
-          <div class="icon">
-            <img src="../images/persian.jpg" alt="English Flag">
+          <div class="icon" onclick="setTimeout(() => {console.log('bib');window.href.location = '{% url 'persian_portfolio' %}'}, 1000)">
+            <img src="{% static '/images/persian.jpg' %}" alt="English Flag">
           </div>
           <div class="text"><p>Persian</p></div>
         </div>
         <div class="l">
-          <div class="icon">
-            <img src="../images/english.jpg" alt="English Flag">
+          <div class="icon" onclick="setTimeout(() => {console.log('bib');window.href.location = '{% url 'english_portfolio' %}'}, 1000)">
+            <img src="{% static '/images/english.jpg' %}" alt="English Flag">
           </div>
           <div class="text"><p>English</p></div>
         </div>
