@@ -3,3 +3,7 @@ html, body {
   font-weight: 200;
   direction: rtl;
 }
+
+* {
+  font-family: "Noto Sans Arabic", serif, monospace;
+}
