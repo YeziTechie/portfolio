@@ -3,6 +3,6 @@ from main.views import LanguageView, PersianView, EnglishView
 
 urlpatterns = [
 	path('', LanguageView.as_view(), name='index'),
-	path('', PersianView.as_view(), name='persian_portfolio'),
-	path('', EnglishView.as_view(), name='english_portfolio'),
+	path('persian/', PersianView.as_view(), name='persian_portfolio'),
+	path('english/', EnglishView.as_view(), name='english_portfolio'),
 ]

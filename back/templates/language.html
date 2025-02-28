@@ -18,14 +18,24 @@
       </div>
 
       <div class="language">
-        <div class="l">
-          <div class="icon" onclick="setTimeout(() => {console.log('bib');window.href.location = '{% url 'persian_portfolio' %}'}, 1000)">
+        <div class="l" onclick="
+            setTimeout(() => {
+              console.log('bib');
+              window.location.href = '{% url 'persian_portfolio' %}';
+            }, 2000);
+          ">
+          <div class="icon">
             <img src="{% static '/images/persian.jpg' %}" alt="English Flag">
           </div>
           <div class="text"><p>Persian</p></div>
         </div>
-        <div class="l">
-          <div class="icon" onclick="setTimeout(() => {console.log('bib');window.href.location = '{% url 'english_portfolio' %}'}, 1000)">
+        <div class="l" onclick="
+            setTimeout(() => {
+              console.log('bib');
+              window.location.href = '{% url 'english_portfolio' %}';
+            }, 2000);
+          ">
+          <div class="icon">
             <img src="{% static '/images/english.jpg' %}" alt="English Flag">
           </div>
           <div class="text"><p>English</p></div>
