@@ -276,6 +276,7 @@ a:visited {
 
 .content {
   display: none;
+  max-width: 700px;
   font-size: 1rem;
 }
 

@@ -1,14 +1,18 @@
 .contact-me .box {
-  margin-top: 100px;
+  margin: 100px auto;
   display: flex; flex-direction: column; 
   justify-content: center; align-items: center;
-  width: 100%;
+  width: 100%; max-width: 400px; 
 }
 
 .box .row {
   display: flex; flex-direction: row;
   justify-content: space-around; align-items: center;
-  width: 100%;
+  width: 100%; margin: 10px;
+
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, transparent, var(--t2), transparent);
 }
 
 .box .icon, .box .button {
@@ -40,11 +44,13 @@
   color: var(--fg);
 }
 
+.box .row a {
+  font-weight: bold;
+}
 
 .email {
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
-
   margin-top: 30px;
   row-gap: 20px;
 }
