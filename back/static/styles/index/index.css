@@ -44,7 +44,7 @@ body, html {
 }
 
 * {
-  font-family: "Thasadith", "Noto Sans Arabic", monospace, arial;
+  font-family: 'comfortaa', "Noto Sans Arabic", monospace, arial;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -71,6 +71,7 @@ button:active {
 
 li {
   margin-bottom: 1rem;
+  line-height: 24px;
 }
 
 a {

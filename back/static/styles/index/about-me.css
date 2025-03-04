@@ -22,6 +22,10 @@
   padding-top: 0;
 }
 
+.about-me p {
+  line-height: 24px;
+}
+
 .about-me .header {
   display: flex;
   flex-direction: column;
