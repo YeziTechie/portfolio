@@ -65,9 +65,11 @@
 }
 
 .sub-detail .detail-content {
+  display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;
   transition: 1s all ease-in-out;
+  padding: 5px;
   height: 0px;
-  overflow: hidden;
+  overflow-y: hidden;
   font-size: 1rem;
 }
 

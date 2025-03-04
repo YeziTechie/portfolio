@@ -108,7 +108,7 @@ a:visited {
 }
 
 .main-circle-clicked {
-  animation: main-circle-clicked 8s ease 1;
+  animation: main-circle-clicked 2s ease 1;
   animation-fill-mode: forwards;
 }
 

@@ -7,7 +7,7 @@ function mainCircleClicked(event) {
     circle.style.visibility = 'visible';
     setTimeout(() => {
       circle.style.opacity = '1';
-    }, 7000);
+    }, 1000);
   }, 1);
 };
 
