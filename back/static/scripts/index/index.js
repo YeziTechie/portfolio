@@ -126,7 +126,8 @@ function cdWrapperContainerExpand() {
   cds.forEach(e => {
     e.style.backgroundColor = 'var(--bg)';
     e.style.color = 'var(--fg)';
-    e.style.pointerEvents = 'auto';
+    e.style.pointerEvents = 'none';
+    setTimeout(() => {e.style.pointerEvents = 'auto'}, 3000);
   })
 
 }
