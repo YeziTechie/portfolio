@@ -104,6 +104,7 @@ function cdWrapperContainerShrink() {
   cds.forEach(e => {
     e.style.boxShadow = 'none';
     e.style.backgroundColor = 'var(--fg)';
+    e.style.pointerEvents = 'none';
   })
 
   clickedCd.style.backgroundColor = 'var(--bg)';
@@ -125,6 +126,7 @@ function cdWrapperContainerExpand() {
   cds.forEach(e => {
     e.style.backgroundColor = 'var(--bg)';
     e.style.color = 'var(--fg)';
+    e.style.pointerEvents = 'auto';
   })
 
 }

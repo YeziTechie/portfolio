@@ -1,5 +1,5 @@
 .contact-me .box {
-  margin: 100px auto;
+  margin: 60px auto;
   display: flex; flex-direction: column; 
   justify-content: center; align-items: center;
   width: 100%; max-width: 400px; 
@@ -60,4 +60,5 @@ button:hover {
   color: transparent;
   border: 1px solid var(--t2);
   box-shadow: 0px 0px 80px var(--t1);
+  margin-bottom: 50px;
 }
