@@ -7,9 +7,10 @@ function mainCircleClicked(event) {
     circle.style.visibility = 'visible';
     setTimeout(() => {
       circle.style.opacity = '1';
-    }, 1000);
+    }, 4000);
   }, 1);
 };
+
 
 function circlesClicked(event) {
   const circle = event.currentTarget;
@@ -19,8 +20,8 @@ function circlesClicked(event) {
   const cd = document.querySelector(`.js-cd-${circle.dataset.cNumber}`);
   setTimeout(() => {
     cd.classList.add('cd-appeared');
-    setTimeout(() => {cd.classList.add('cd-clicked')}, 4000);
-  }, 4500)
+    setTimeout(() => {cd.classList.add('cd-clicked')}, 2499);
+  }, 3500)
 };
 
 function cdClicked(event) {
